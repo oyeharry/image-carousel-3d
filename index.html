@@ -1,1 +1,74 @@
-Hello World
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Image-carousel-3d by oyeharry</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/oyeharry/image-carousel-3d">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/oyeharry/image-carousel-3d/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/oyeharry/image-carousel-3d/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Image-carousel-3d</h1>
+          <p>A 3D image rotation carousel</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/oyeharry">oyeharry</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="image-carsouel-3d" class="anchor" href="#image-carsouel-3d"><span class="octicon octicon-link"></span></a>Image Carsouel 3D</h1>
+
+<p>There are two types of jQuery Plugin included.</p>
+
+<ol>
+<li>
+<code>image-carousel-3d-builder.js</code> Build DOM  using JSON for Carousel and init Carousel plugin.</li>
+<li>
+<code>image-carousel-3d.js</code> Use static HTML to build Carousel.</li>
+</ol><h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a name="image-carousel-3d" class="anchor" href="#image-carousel-3d"><span class="octicon octicon-link"></span></a>Image carousel 3D</h3>
+
+<p><code>$("#imgCarousel3d").imgCarousel3d();</code></p>
+
+<h3>
+<a name="image-carousel-with-dom-builder-using-json" class="anchor" href="#image-carousel-with-dom-builder-using-json"><span class="octicon octicon-link"></span></a>Image carousel with DOM builder using JSON</h3>
+
+<pre><code>$("#imgCarousel3d").buildImgCarousel3d({
+      dataFileUrl: '../build/data/image-carsouel-3d-data.json', 
+      templateId: 'imgCarousel3dTemplate', //Hogan Template HTML ID
+      assetPath: '../build/assets/' // assets path for images
+});
+</code></pre>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
