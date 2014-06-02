@@ -1,0 +1,181 @@
+@import (reference)"prefixer.less";
+ @imgPath:'../../build/assets/'; 
+ @higlightColor:#fff;
+ @imgInfoBgHeight:55px; 
+ .font-family-bold() {
+    font-family: 'abel', 'Arial Bold', sans-serif;
+    font-weight: 700;
+}
+.font-family-normal() {
+    font-family:'abel', 'Arial', sans-serif;
+    font-weight: 400;
+}
+#imgCarousel3d {
+    color:#000;
+    background: #000;
+    height: 100%;
+    overflow: hidden;
+    width:1000px;
+    height:480px;
+    margin:0 auto;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    * {
+        outline: none;
+    }
+    img {
+        text-decoration: none;
+        border: 0;
+        vertical-align: middle;
+    }
+    .title-container {
+        color: @higlightColor;
+        .font-family-bold();
+        font-weight: bold;
+        font-size: 2.5em;
+        text-align: center;
+        padding: 20px;
+    }
+    .imgs-container {
+        width: 1000px;
+        height: 310px;
+        margin: 0px auto;
+        position: relative;
+        // background-color: gray;
+        .imgs {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top:0;
+        }
+        .img-container {
+            position: absolute;
+            left:268px;
+            visibility: hidden;            
+            .opacity(0);
+            width:456px;
+            @imgContentHeight : 284px;
+            .img-content {
+                border: 3px solid @higlightColor;
+                width:100%;
+                // height:280px;
+                // background-color: rgba(255, 255, 255, 1);
+                position: relative;
+                .img-info {
+                    background-color: rgba(0, 0, 0, 0.8);
+                    // .opacity(0.8);
+                    width:100%;
+                    height:@imgInfoBgHeight;
+                    position: absolute;
+                    bottom: 0;
+                    .title {
+                        color:@higlightColor;
+                        .font-family-normal();
+                        position: relative;
+                        left: 10px;
+                        top:5px;
+                        font-size:1em;  
+                        line-height: 1.6em;                      
+                    }
+                    .sub-title {
+                        .title();
+                        color:#e7e7e7;
+                        font-size:0.9em;
+                        top:3px;                        
+                    }                    
+                }
+                a.img-link {
+                    height: 100%;
+                    display: block;
+                    text-decoration: none;
+                    cursor: pointer;
+                }                
+            }
+            .img-ref {
+                border-left:3px solid transparent;
+                height: @imgContentHeight;
+                width:100%;
+                position: relative;
+                z-index: -1;
+                bottom: 7px;
+                .opacity(0.7);
+                img.main-img {
+                    .transform(scaleY(-1));
+                    position: absolute;
+                }
+                &:after {
+                    content:"";
+                    width: 100%;
+                    height: 470px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    .linear-gradient-top(#000, rgba(0, 0, 0, 0), 38%, rgba(0, 0, 0, 0.67), 40%, rgba(0, 0, 0, 1), 65%)
+                }
+            }
+            .main-img {
+                width: 100%;
+            }
+        }
+    }
+    .img-types {
+        width:555px;
+        margin:0 auto;
+        height: 27px;
+        position: relative;
+        z-index: 2;
+        @underLineColor: #0078c8;
+        @typeWidth : 180px;
+        .imgs-type {
+            float:left;
+            margin-right: 5px;
+            width: @typeWidth;
+            height: 20px;
+            div {                
+                height: 100%;
+                cursor: pointer; 
+                color:#fff;
+                .font-family-bold();
+                text-align: center;
+            }           
+        }
+        .img-selectbar {
+            border-bottom: 3px solid @underLineColor;
+            position: absolute;
+            width: @typeWidth;
+            bottom: 0px;
+        }
+    }
+    .imgs-scrollbar {
+        width:800px;
+        height:15px;
+        border:1px solid #678092;
+        border-radius: 10px;
+        margin: 0 auto;
+        position: relative;
+        top:10px;
+        z-index: 3;
+        cursor: pointer;
+        .scroller {
+            background-color: #fff;
+            height: 15px;
+            width:125px;
+            border-radius: 10px;
+        }
+    }
+    /* just to override us.playstation.com defaults */
+    .small-btn {
+        font-size:14px;
+    }
+    .small-btn .btn {
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+}
+/*no reflection less then ie-10 */
+ .lt-ie10 #imgCarousel3d .imgs-container .img-container .img-ref {
+    display: none;
+}

@@ -1,0 +1,13 @@
+{
+  "name": "ps-plus-marquee",
+  "version": "0.1.0",
+  "author": {
+    "name": "harry",
+    "url": "http://www.oyeharry.com"
+  },
+  "dependencies": {
+    "jquery": "~2.0.1",
+    "gsap": "~1.11.8",
+    "hogan": "~3.0.0"
+  }
+}
