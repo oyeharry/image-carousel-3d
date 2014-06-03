@@ -473,7 +473,7 @@
 
 				if (!self.changingCategory) {
 
-					var hideIndex = (self.totalImgs + self.totalImgToView + 15);
+					var hideIndex = (self.totalImgs + self.totalImgToView + 5);
 
 					self.changingCategory = true;
 					self.showImgAt(hideIndex);
