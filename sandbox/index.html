@@ -47,6 +47,7 @@
     <script type="text/javascript" src="../bower_components/gsap/src/minified/easing/EasePack.min.js"></script>    
     <script type="text/javascript" src="../bower_components/gsap/src/minified/utils/Draggable.min.js"></script>    
     <script type="text/javascript" src="../bower_components/hogan/web/builds/2.0.0/hogan-2.0.0.min.js"></script>    
+     
     <script type="text/javascript" src="../src/js/polyfills.js"></script>
     <script type="text/javascript" src="../src/js/image-carousel-3d-builder.js"></script>
     <script type="text/javascript" src="../src/js/image-carousel-3d.js"></script>
@@ -102,7 +103,13 @@
 	<script type="text/javascript">
 	
 	
-     $("#imgCarousel3d").buildImgCarousel3d({dataFileUrl:'../build/data/image-carsouel-3d-data.json',templateId:'imgCarousel3dTemplate', assetPath:'../build/assets/'});
+    $("#imgCarousel3d").buildImgCarousel3d({
+			dataFileUrl: '../build/data/image-carsouel-3d-data.json',
+			templateId: 'imgCarousel3dTemplate',
+			assetPath: '../build/assets/',
+			curIndex: 0
+		});
+
     // $("#imgCarousel3d").imgCarousel3d();
 
 
