@@ -6,7 +6,7 @@ There are two types of jQuery Plugin included.
 2. `image-carousel-3d.js` 
     Use static HTML to build Carousel.
 
-##Example
+##Demo
 http://oyeharry.github.io/image-carousel-3d/
 
 ## Usage
