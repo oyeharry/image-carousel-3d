@@ -32,11 +32,11 @@ if (typeof Object.create !== 'function') {
 
 			self.totalImgToView = 5;
 			self.imgDepthGap = 0.2;
-			self.targetViewIndex = -1;
 			self.curImgViewIntervalId = 0;
 			self.isScrollerDragging = false;
 			self.intervalTime = 150;
 			self.angleGap = 800;
+			self.curLoadingQueueSign = 0; //loading sign for cur loading group
 
 			self.initCarousel();
 
@@ -80,9 +80,13 @@ if (typeof Object.create !== 'function') {
 			var curIndex = selfOptions.curIndex;
 			selfOptions.curIndex = -5; //self.totalImgs + 5; // fake index for startup animation
 
+			self.targetViewIndex = -1;
+
+			self.initImgsLoadComplete = false;
 			self.setPoints();
 			self.showImgAt(curIndex);
 			self.initImgsClick();
+
 
 
 		},
@@ -306,8 +310,9 @@ if (typeof Object.create !== 'function') {
 		showImgAt: function(index) {
 			var self = this;
 			var selfOptions = self.options;
-
+			console.log(index, self.targetViewIndex);
 			if (!self.checkInitImgsLoad(index)) {
+				self.pendingImgViewIndex = index;
 				return false;
 			}
 
@@ -320,7 +325,6 @@ if (typeof Object.create !== 'function') {
 			}
 
 			self.targetViewIndex = index;
-
 			self.initAnimationInterval();
 
 			if (!self.isScrollerDragging && !self.changingCategory) {
@@ -341,14 +345,28 @@ if (typeof Object.create !== 'function') {
 		},
 
 		imgLoadHandler: function(e) {
-			// console.log(e, $(e.target).parent())
+			var self = this;
+			var $img = $(e.target);
 			if (e.type === 'load') {
-				TweenLite.to($(e.target), 0.6, {
+				TweenLite.to($img, 0.6, {
 					autoAlpha: 1,
 					ease: Sine.easeOut
 				});
 			} else {
 				self.logErorr('Oops "' + e.target.src + '" image loading failed :(');
+			}
+
+			if (self.curLoadingQueueSign == $img.data().loadingQueueSign) {
+				self.loadingImgIndex++;
+				self.setInitImgsLoadComplete();
+			}
+		},
+
+		setInitImgsLoadComplete: function() {
+			var self = this;
+			if (self.totalLoadingImgs === self.loadingImgIndex && !self.initImgsLoadComplete) {
+				self.initImgsLoadComplete = true;
+				self.showImgAt(self.pendingImgViewIndex);
 			}
 		},
 
@@ -356,7 +374,13 @@ if (typeof Object.create !== 'function') {
 			var self = this;
 			if (!$img.hasClass('loaded')) {
 				$img.addClass('loaded');
-				$img.find('.img-content img[data-src]').load(self.imgLoadHandler).error(self.imgLoadHandler).css('opacity', 0);
+				self.totalLoadingImgs += 1;
+
+				var imgLoaded = function(e) {
+					self.imgLoadHandler(e);
+				}
+
+				$img.find('.img-content img[data-src]').attr('data-loading-queue-sign', self.curLoadingQueueSign).load(imgLoaded).error(imgLoaded).css('opacity', 0);
 				$img.find('img[data-src]').each(function() {
 					$this = $(this);
 					$this.parent();
@@ -373,21 +397,22 @@ if (typeof Object.create !== 'function') {
 			var self = this;
 			var selfOptions = self.options;
 			var maxPlusLoadIndex = index + self.totalImgToView;
+
 			maxPlusLoadIndex = maxPlusLoadIndex > self.totalImgs ? self.totalImgs : maxPlusLoadIndex;
 			var curImgLoadIndex = index;
 
-			for (var i = index; i < maxPlusLoadIndex; i++) {
+			self.totalLoadingImgs = 0;
+			self.loadingImgIndex = 0;
+			self.curLoadingQueueSign++;
+			for (var i = 0; i < maxPlusLoadIndex; i++) {
 
 				self.checkImgLoad(self.$imgs.eq(i));
 
 			}
 
-			/*if (index === 0) {
-				return true;
-			} else {
-				return true;
-			}*/
-			return true;
+			self.setInitImgsLoadComplete();
+
+			return self.initImgsLoadComplete;
 		},
 
 		initScrollbar: function() {
@@ -458,11 +483,11 @@ if (typeof Object.create !== 'function') {
 				$this.addClass('active');
 
 				if (!self.changingCategory) {
-					var hideIndex = (self.totalImgs + self.totalImgToView + 3);
+
+					var hideIndex = (self.totalImgs + self.totalImgToView + 15);
 
 					self.changingCategory = true;
 					self.showImgAt(hideIndex);
-
 
 					setTimeout(function() {
 						self.changingCategory = false;
