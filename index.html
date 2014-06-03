@@ -1,86 +1,512 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Image-carousel-3d by oyeharry</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
+    <title>Image-carousel-3d by oyeharry</title>    
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/oyeharry/image-carousel-3d">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/oyeharry/image-carousel-3d/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/oyeharry/image-carousel-3d/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
+    <script src="//use.edgefonts.net/abel.js"></script>   
+
+    <style type="text/css">
+        
+          body { 
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJElEQVQYV2Pk5+f///HjRwZCgBGo4D8hRSD5UYV4Q4mR2AAHAM/tEAHPeMpYAAAAAElFTkSuQmCC) repeat #000;
+          }
+
+          .navbar {
+            color:#222;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAI0lEQVQYV2N88fTFf3EpcQZCgPE/EBBSBJIfVYg3lBiJDXAAv08n4zEnIA8AAAAASUVORK5CYII=) repeat #000;  
+          }
+
+          .header-container {            
+            padding-bottom: 40px; 
+          }
+
+          .header-container h1{
+            margin-top: 0;
+            padding-top: 20px;
+          }
+
+          .header-container .btn {
+            margin-right: 10px;
+          }
+
+          .header-container .btn.fork {
+            margin-right: 40px;
+          }
+
+          .container #imgCarousel3d{
+            margin-left: -70px;
+          }
+
+
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">    
+    <link rel="stylesheet" type="text/css" href="build/files/image-carousel-3d.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+   <header>
+
+         <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+
+          <div class="container header-container">
+             <h1>Image Carousel 3D</h1>
+             <h3>A 3D image rotation carousel</h3>
+             <a href="https://github.com/oyeharry/image-carousel-3d" class="btn btn-primary fork">View on Github</a>
+             <a href="https://github.com/oyeharry/image-carousel-3d/zipball/master" class="btn btn-primary ">Download .zip</a>
+             <a href="https://github.com/oyeharry/image-carousel-3d/tarball/master" class="btn btn-primary ">Download .tar.gz</a>
+         </div>
+
         </nav>
-      </div><!-- end header -->
+         
+         
+   </header>
+    
+    <section>
+            
+            <div class="container">
+                    
+                    <div id="imgCarousel3d">
+        
+      <div class="title-container"><span>Carousel Title</span></div>
 
-    <div class="wrapper">
+          <div class="imgs-container">
 
-      <section>
-        <div id="title">
-          <h1>Image-carousel-3d</h1>
-          <p>A 3D image rotation carousel</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/oyeharry">oyeharry</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
 
-        <h1>
-<a name="image-carsouel-3d" class="anchor" href="#image-carsouel-3d"><span class="octicon octicon-link"></span></a>Image Carsouel 3D</h1>
+              <div class="imgs" id="nature">
+               
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/nature-1.jpg" alt="Image Name 1" title="Image Name 1"> 
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 1</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/nature-1.jpg" src="../build/assets/nature-1.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/nature-2.jpg" alt="Image Name 2" title="Image Name 2"> 
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 2</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/nature-2.jpg" src="../build/assets/nature-2.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/nature-3.jpg" alt="Image Name 3" title="Image Name 3"> 
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 3</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/nature-3.jpg" src="../build/assets/nature-3.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/nature-4.jpg" alt="Image Name 4" title="Image Name 4"> 
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 4</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle3</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/nature-4.jpg" src="../build/assets/nature-4.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/nature-5.jpg" alt="Image Name 5" title="Image Name 5"> 
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 5</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/nature-5.jpg" src="../build/assets/nature-5.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/nature-6.jpg" alt="Image Name 6" title="Image Name 6"> 
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 6</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/nature-6.jpg" src="../build/assets/nature-6.jpg">  
+                   </div>
+                </div>  
+            
+             </div>   
 
-<p>There are two types of jQuery Plugin included.</p>
 
-<ol>
-<li>
-<code>image-carousel-3d-builder.js</code> 
-Build DOM  using JSON for Carousel and init Carousel plugin.</li>
-<li>
-<code>image-carousel-3d.js</code> 
-Use static HTML to build Carousel.</li>
-</ol><h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+              <div class="imgs" id="wild-life">
+               
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/wild-1.jpg" alt="Image Name 1" title="Image Name 1">   
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 1</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/wild-1.jpg" src="../build/assets/wild-1.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/wild-2.jpg" alt="Image Name 2" title="Image Name 2">   
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 2</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/wild-2.jpg" src="../build/assets/wild-2.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/wild-3.jpg" alt="Image Name 3" title="Image Name 3">   
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 3</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/wild-3.jpg" src="../build/assets/wild-3.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/wild-4.jpg" alt="Image Name 4" title="Image Name 4">   
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 4</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle3</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/wild-4.jpg" src="../build/assets/wild-4.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/wild-5.jpg" alt="Image Name 5" title="Image Name 5">   
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 5</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/wild-5.jpg" src="../build/assets/wild-5.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/wild-6.jpg" alt="Image Name 5" title="Image Name 5">   
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 5</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/wild-6.jpg" src="../build/assets/wild-6.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/wild-7.jpg" alt="Image Name 5" title="Image Name 5">   
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 5</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/wild-7.jpg" src="../build/assets/wild-7.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/wild-8.jpg" alt="Image Name 5" title="Image Name 5">   
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 5</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/wild-8.jpg" src="../build/assets/wild-8.jpg">  
+                   </div>
+                </div>  
+            
+             </div>   
 
-<h3>
-<a name="image-carousel-3d" class="anchor" href="#image-carousel-3d"><span class="octicon octicon-link"></span></a>Image carousel 3D</h3>
 
-<p><code>$("#imgCarousel3d").imgCarousel3d();</code></p>
+              <div class="imgs" id="fields">
+               
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/fields-1.jpg" alt="Image Name 1" title="Image Name 1"> 
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 1</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/fields-1.jpg" src="../build/assets/fields-1.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/fields-2.jpg" alt="Image Name 2" title="Image Name 2"> 
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 2</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/fields-2.jpg" src="../build/assets/fields-2.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/fields-3.jpg" alt="Image Name 3" title="Image Name 3"> 
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 3</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/fields-3.jpg" src="../build/assets/fields-3.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/fields-4.jpg" alt="Image Name 4" title="Image Name 4"> 
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 4</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle3</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/fields-4.jpg" src="../build/assets/fields-4.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/fields-5.jpg" alt="Image Name 5" title="Image Name 5"> 
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 5</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/fields-5.jpg" src="../build/assets/fields-5.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/fields-6.jpg" alt="Image Name 5" title="Image Name 5"> 
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 5</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/fields-6.jpg" src="../build/assets/fields-6.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/fields-7.jpg" alt="Image Name 5" title="Image Name 5"> 
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 5</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/fields-7.jpg" src="../build/assets/fields-7.jpg">  
+                   </div>
+                </div>  
+               <div class="img-container">
+                 <div class="img-content">
+                   <a href="http://www.google.com" target="_blank" class="img-link" data-click-track="NF//ps-playstation-plus_">
+                     <img class="main-img" data-src="../build/assets/fields-8.jpg" alt="Image Name 5" title="Image Name 5"> 
+                     <div class="img-info">                      
+                         <div class="title"><strong>Image Name 5</strong></div>
+                         <div class="sub-title"><strong>Image Subtitle</strong></div>
+                         
+                     </div>               
+                   </a>   
+                  
+                   </div>
+                   <div class="img-ref">
+                     <img class="main-img" data-src="../build/assets/fields-8.jpg" src="../build/assets/fields-8.jpg">  
+                   </div>
+                </div>  
+            
+             </div>   
 
-<h3>
-<a name="image-carousel-with-dom-builder-using-json" class="anchor" href="#image-carousel-with-dom-builder-using-json"><span class="octicon octicon-link"></span></a>Image carousel with DOM builder using JSON</h3>
 
-<pre><code>$("#imgCarousel3d").buildImgCarousel3d({
-      dataFileUrl: '../build/data/image-carsouel-3d-data.json', 
-      templateId: 'imgCarousel3dTemplate', //Hogan Template HTML ID
-      assetPath: '../build/assets/' // assets path for images
-});
-</code></pre>
-      </section>
+          </div>
+            
+          <div class="img-types">
+              <ul>      
+                  <li class="imgs-type nature active" data-connect-id="nature"><div>Nature</div></li>               
+                  <li class="imgs-type wild-life active" data-connect-id="wild-life"><div>Wild Life</div></li>              
+                  <li class="imgs-type fields active" data-connect-id="fields"><div>Fields</div></li>               
+              </ul>
+              <div class="img-selectbar"></div>
+          </div>
 
+          <div class="imgs-scrollbar"><div class="scroller"></div></div>
+          
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-39730871-2");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
 
-  </body>
+    
+
+      </div>
+
+    </section>
+   
+    
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>            
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.8/TweenLite.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.8/easing/EasePack.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.8/plugins/CSSPlugin.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.8/utils/Draggable.min.js"></script>
+    
+    <script src="build/files/image-carousel-3d-min.js"></script>
+    
+   
+    <script type="text/javascript">
+        
+     $("#imgCarousel3d").imgCarousel3d( { curIndex:2, radius:800 } );
+    
+    </script>
+    
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-39730871-2");
+        pageTracker._trackPageview();
+    } catch (err) {}
+    </script>
+
+</body>
+
 </html>
