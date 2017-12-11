@@ -1,4 +1,4 @@
-#Image Carsouel 3D
+# Image Carsouel 3D
 There are two types of jQuery Plugin included.
 
 1. `image-carousel-3d-builder.js` 
@@ -6,15 +6,15 @@ There are two types of jQuery Plugin included.
 2. `image-carousel-3d.js` 
     Use static HTML to build Carousel.
 
-##Demo
+## Demo
 http://oyeharry.github.io/image-carousel-3d/
 
 ## Usage
 
-###Image Carousel 3D
+### Image Carousel 3D
 `$("#imgCarousel3d").imgCarousel3d( { curIndex:2 } );`
 
-###Image Carousel Builder
+### Image Carousel Builder
 ```
 $("#imgCarousel3d").buildImgCarousel3d({
       dataFileUrl: '../build/data/image-carsouel-3d-data.json', 
@@ -23,8 +23,8 @@ $("#imgCarousel3d").buildImgCarousel3d({
 });
 ```
 
-##Options 
-###Image Carousel Builder
+## Options 
+### Image Carousel Builder
 | Property      | Defaults     | Descriptions                                            |
 | :--------     | :--------    |:------------                                            |
 | dataFile      | ''           | JSON File Name. Plugin will load JSON from dataPath     |
@@ -34,7 +34,7 @@ $("#imgCarousel3d").buildImgCarousel3d({
 | jsonp		    | false        | Boolean value to load JSOP data                         |
 | templateId    | ''           | Hogan Template ID to build DOM without #                | 
 		
-###Image Carousel
+### Image Carousel
 | Property                  | Defaults                     | Descriptions |
 | :--------                 | :------------------------    | :----------- |
 | curIndex	                | 0                            | Startup Image View Index   |
